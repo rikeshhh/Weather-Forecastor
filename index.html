@@ -9,66 +9,64 @@
       src="https://kit.fontawesome.com/945fb9bd69.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        background-image: url(thunder.png);
-        background-position: bottom;
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: white;
-        font-family: "Roboto", sans-serif;
-      }
-      .container {
-        max-width: calc (1174px + 30px);
-        padding: 0px 15px;
-        margin: 0 auto;
-        width: 100%;
-      }
-      .glass-morphism {
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-      }
-    </style>
   </head>
 
   <body>
-    <main>
-      <section class="container">
-        <div class="flex justify-between items-center">
-          <div class="flex" id="intro">
-            
+    <section class="container">
+      <h1>Weather Forecast</h1>
+      <form action="">
+        <input type="text" id="userInput" placeholder="Enter location" required />
+        <button onclick="fetchWeather(event)">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div class="weather glass-morphism">
+        <div id="date">Mon,Dec12 2023 22:22:36 GMT +0545 (Nepal Time)</div>
+        <div  class="weath">
+          <div class="weather__content">
+            <h2 id="userCity">Athens</h2>
+            <p id="temperature">24°C</p>
           </div>
-          <div
-            class="glass-morphism w-[400px] h-screen flex flex-col justify-center items-center text-xl"
-          >
-            <form class="flex gap-2 items-center justify-center">
-              <input
-                type="text"
-                class="bg-transparent border-b-2"
-                id="userInput"
-              />
-              <button onclick="fetchWeather(event)">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
-            <div class="flex flex-col">
-              <h2>Weather Details</h2>
-              <div id="temp"></div>
+          <div class="windSpeed">
+            <i class="fa-solid fa-wind"></i>
+            <p id="windSpeed">20m/s</p>
+          </div>
+
+          <div class="weatherDetail">
+            <div class="minimumTemperature">
+              <i class="fa-solid fa-temperature-low"></i>
+              <p id="minTemp">4°C</p>
+            </div>
+            <div class="maximumTemperature">
+              <i class="fa-solid fa-temperature-high"></i>
+              <p id="maxTemp">2°C</p>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+      <div class="weatherUpdate">
+        <div>
+          <h3>Humidity</h3>
+          <span id="humidity">16°C</span>
+        </div>
+        <div>
+          <h4>Sunrise</h4>
+          <span id="sunrise">4:52PM</span>
+        </div>
+        <div class="glass-morphism">
+          <h5>Sunset</h5>
+          <span id="sunset">6:32PM</span>
+        </div>
+      </div>
+   
+    </section>
     <script src="index.js"></script>
   </body>
 </html>
