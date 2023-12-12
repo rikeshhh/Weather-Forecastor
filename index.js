@@ -1,7 +1,6 @@
 async function fetchWeather(event) {
   event.preventDefault();
   document.body.style.backgroundImage = "url('tree.jpg')";
-  document.querySelector('h1').style.color = "#ff5349";
   const userInput = document.getElementById("userInput").value;
   const url = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${userInput}`;
   const options = {
