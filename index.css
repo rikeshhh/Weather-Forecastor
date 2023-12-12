@@ -4,7 +4,10 @@ body {
   justify-content: center;
   align-items: center;
   max-height: 100vh;
-
+background-image: url(thunder.png);
+background-position: center;
+background-size: cover;
+object-fit: cover;
 }
 .main-header {
   color: black;
