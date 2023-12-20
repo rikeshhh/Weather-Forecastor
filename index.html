@@ -1,77 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      src="https://kit.fontawesome.com/945fb9bd69.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <section class="container">
-      <div class="containerContents">
-        <form action="">
-          <input
-            type="text"
-            id="userInput"
-            placeholder="Enter location"
-            required
-          />
-          <button onclick="fetchWeather(event)">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-        <div class="weather ">
-          <div id="date">Mon,Dec12 2023 22:22:36 GMT +0545 (Nepal Time)</div>
-          <div class="weath">
-            <div class="weather__content">
-              <h2 id="userCity">Athens</h2>
-              <p id="temperature">24°C</p>
-            </div>
-            <div class="windSpeed">
-              <i class="fa-solid fa-wind"></i>
-              <p id="windSpeed">20m/s</p>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/945fb9bd69.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+</head>
 
-            <div class="weatherDetail">
-              <div class="minimumTemperature">
-                <i class="fa-solid fa-temperature-low"></i>
-                <p id="minTemp">4°C</p>
+<body>
+  <section>
+    <div class="snow-ball-container">
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+      <div class="snow-ball"></div>
+    </div>
+    <div class="container">
+      <div class="container__content">
+        <div class="weather__detail__cart">
+          <div class="weather__nav__body">
+            <h1>Weather Today</h1>
+
+            <nav>
+              <form class="header__input">
+                <input type="text" id="userInput" placeholder="Kathmandu">
+                <button class="search__weather" onclick="fetchWeather(event)"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+            </nav>
+            <div class="weather__temperature__detail">
+
+              <div>
+                <h2 id="weather__detail__temperature">14°C</h2>
+
+                <p id="city">Kathmandu</p>
               </div>
-              <div class="maximumTemperature">
-                <i class="fa-solid fa-temperature-high"></i>
-                <p id="maxTemp">2°C</p>
+              <div>
+                <ul>
+                  <li>Sunrise <span id="sunrise">6:49:26 AM</span></li>
+                  <li>Sunset <span id="sunset">5:12:34 PM</span></li>
+                  <li>MaxTemp <span id="maxtemperature">19°C</span></li>
+                  <li>MinTemp <span id="mintemperature">18°C</span></li>
+                </ul>
+              </div>
+            </div>
+            <footer>
+             
+            </footer>
+          </div>
+          <div class="weather__cart">
+            <div class="weather__cart__items">
+              <div class="weather__cart__city">
+                <div>
+                  <h2 id="weather__date"></h2>
+                  <span>Nepal</span>
+                </div>
+                <figure>
+                  <img src="./lion-6382207_640.png" alt="">
+                </figure>
+              </div>
+
+              <div class="weather__cart__details">
+                <h2>Weather Details</h2>
+                <div>
+                  <ul>
+                    <li>Cloudy <span id="cloudy">16oktas</span></li>
+                    <li>Humidity <span id="humidity">16g.m-3</span></li>
+                    <li>Perception <span id="perception">16%</span></li>
+                    <li>Wind <span id="wind">16km/s</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="weather__cart__temperature__chart">
+                <div id="chart">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="weatherUpdate">
-          <div>
-            <h3>Humidity</h3>
-            <span id="humidity">16°C</span>
-          </div>
-          <div>
-            <h4>Sunrise</h4>
-            <span id="sunrise">4:52PM</span>
-          </div>
-          <div class="glass-morphism">
-            <h5>Sunset</h5>
-            <span id="sunset">6:32PM</span>
-          </div>
+
         </div>
       </div>
-    </section>
-    <script src="index.js"></script>
-  </body>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>
